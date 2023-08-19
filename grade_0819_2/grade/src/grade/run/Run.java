@@ -1,12 +1,10 @@
 package grade.run;
-import java.util.ArrayList;
 import java.util.List;
 
 import grade.student.*;
 import grade.subject.*;
 
 public class Run {
-
 	public static void main(String[] args) {
 		
 		Student student1 = new Student("김지용", 19392, "국어");
@@ -38,13 +36,11 @@ public class Run {
 		List<Student> studentsK = korean.getStudents();
 		List<Integer> scoresK = korean.getScores();
 		List<String> gradesK = korean.getGrades();
-		
 		System.out.println("---------------------");
 		System.out.println("   국어 수강생 학점   ");
 		System.out.println("이름 | 학번 |중점|점수");
-		System.out.println("-----------------------");
+		System.out.println("---------------------");
 		for(int i=0; i<studentsK.size(); i++) {
-		
 			System.out.print(studentsK.get(i));
 			System.out.print(scoresK.get(i));
 			System.out.print(gradesK.get(i));
@@ -57,10 +53,8 @@ public class Run {
 		System.out.println("----------------------");
 		System.out.println("   수학 수강생 학점   ");
 		System.out.println("이름 | 학번 |중점|점수");
-		System.out.println("-----------------------");
-		
+		System.out.println("----------------------");
 		for (int i=0; i<studentsM.size(); i++) {
-			
 			System.out.print(studentsM.get(i));
 			System.out.print(scoresM.get(i));
 			System.out.print(gradesM.get(i));
@@ -70,19 +64,18 @@ public class Run {
 		List<Student> studentsD = dance.getStudents();
 		List<Integer> scoresD = dance.getScores();
 		List<String> gradesD = dance.getGrades();
-		
 		System.out.println("----------------------");
 		System.out.println(" 방송댄스 수강생 학점   ");
 		System.out.println("이름 | 학번 |중점|점수");
-		System.out.println("-----------------------");
-		
+		System.out.println("----------------------");
 		for (int i = 0; i < studentsD.size(); i++) {
 			System.out.print(studentsD.get(i));
 			System.out.print(scoresD.get(i));
 			System.out.print(gradesD.get(i));
 			System.out.println();
 		}
-		System.out.println("----------------------------");
+		
+		System.out.println("----------------------");
 	}
 
 }

@@ -1,9 +1,9 @@
 package grade.evaluation;
 
-public class Major {
+public class Major implements GradeEvaluation{
+	private String grade;
+	@Override
 	public String GradeOfSubject(int score) {
-		String grade;
-
 		if (score >= 95 && score <= 100)
 			grade = "S";
 		else if (score >= 90)
@@ -18,5 +18,4 @@ public class Major {
 			grade = "F";
 		return grade;
 	}
-
 }
