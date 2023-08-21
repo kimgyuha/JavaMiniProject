@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script>
+	function addItem(){
+		let todo = document.getElementById("item");
+		let list = document.getElementById("todolist");
+		let listItem = document.createElement("li");
+		listItem.className = "d-flex list-group-item list-group-item-action list-group-item-warning";
+		listItem.innerText = todo.value;
+		
+		let xbtn = document.createElement("button");
+		
+		xbtn.className = "btn-close ms-auto";
+		
+		xbtn.onclick = function(e){ //e에 이벤트(온클릭)가 저장됨, e에 xbtn.onclick가 저장됨
+			//let pnode = e.target.parentNode; //e.targer이 버튼을 지칭함
+			//list.removeChild(pnode);
+			//pnode.removeChild(e.target); // 부모(리스트객체, e.target(버튼)의 부모).removeChile("삭제대상")
+			//버튼의 부모가 버튼을 삭제
+			listItem.removeChild(xbtn);
+			
+		}
+		listItem.appendChild(xbtn);
+		list.appendChild(listItem);
+		
+		todo.value = "";
+		todo.focus();
+	}
+	</script>
+<title>실습 3-2</title>
+</head>
+<body>
+	<div class="container bg-warning shadow mx-auto mt-5 p-5 w-75">
+		<h2>My ToDo App</h2>
+		<hr>
+		<div class="input-group">
+			<input id="item" class="form-control" type="text" placeholder="할일을 입력하세요..">
+			<button type="button" class="btn btn-primary" onclick ="addItem()">할일 추가</button>
+		</div>
+		<hr>
+		<ul id="todolist"></ul>
+	</div>
+</body>
+</html>
