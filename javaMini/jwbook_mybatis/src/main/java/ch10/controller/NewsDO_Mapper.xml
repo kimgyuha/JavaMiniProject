@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ch10.controller.NewsDO_Mapper">
+
+	<select id="getNews" resultType="NT" parameterType="int">
+		select title, img, FORMATDATETIME(date, 'yyyy-MM-dd hh:mm:ss') as newsdate, content from news where aid = #{aid}
+	</select>
+
+	<insert id="addNews" parameterType="NT">
+		insert into news(title, img, date, content) values(#{title},#{img},current_timestamp(), #{content})
+	</insert>
+
+	<insert id="delNews" parameterType="int">
+		Delete from news where aid=#{aid}
+	</insert>
+
+	<select id="getAll" resultType="NT">
+		select aid, title, FORMATDATETIME(date, 'yyyy-MM-dd hh:mm:ss') as newsdate from news
+	</select>
+</mapper>
