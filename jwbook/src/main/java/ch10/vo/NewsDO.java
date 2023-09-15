@@ -1,4 +1,4 @@
-package ch10;
+package ch10.vo;
 
 public class NewsDO {
     private int aid;

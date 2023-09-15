@@ -22,6 +22,9 @@ import org.apache.commons.beanutils.BeanUtils;
 //클라이언트의 요청을 받고, NewsDAO를 사용하여 데이터베이스에서 데이터를 가져오거나 조작한 후, 
 //이를 뷰에 전달하여 웹 페이지에 뉴스 목록을 표시하거나 개별 뉴스를 보여줌
 
+import ch10.vo.NewsDAO;
+import ch10.vo.NewsDO;
+
 
 
 @WebServlet("/news.nhn") // 서블릿을 웹에 매핑함

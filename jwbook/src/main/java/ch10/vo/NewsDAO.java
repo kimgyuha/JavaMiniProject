@@ -1,4 +1,4 @@
-package ch10;
+package ch10.vo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

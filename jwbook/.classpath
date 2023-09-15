@@ -42,9 +42,9 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Dev/h2-2.2.220.jar"/>
-	<classpathentry kind="lib" path="C:/Dev/mybatis-3.5.13.jar"/>
-	<classpathentry kind="lib" path="C:/Dev/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/h2-2.2.220.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="D:/Dev/apache-tomcat-9.0.73/lib/servlet-api.jar"/>
 	<classpathentry kind="src" path="target/generated-sources/annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
