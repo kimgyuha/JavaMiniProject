@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="memberMapper">
+	<resultMap type="Member" id="memberResultSet">
+		<id property="memberId" column="MEMBER_ID" />
+		<id property="memberPwd" column="MEMBER_PWD" />
+		<id property="memberName" column="MEMBER_NM" />
+		<id property="memberEnrollDate" column="MEMBER_ENROLL_DT" />
+		
+	</resultMap>
+	<!--  submitAnswer를 메서드(메서드는 클래스로 만듦)로 만듦 -->
+	<!--  submitAnswer 클래스를 만들어야한다는걸 강제하기 위해 인터페이스로 만듦-->
+	<!--  위에서 선언해놓은 resultMap과 연결됨 -->
+	<select id="loginMember" parameterType="Member" resultMap="memberResultSet">
+		SELECT * FROM MEMBER WHERE MEMBER_ID=#{memberId} AND MEMBER_PWD=#{memberPwd}
+		<!-- QUESTION과 question이 같고 ANSWER과 answer이 같으면 그 행을 가져옴  -->
+		<!-- QUESTION과 ANSWER은 DB 테이블에 저장된값, question과 answer은 index페이지에서 셋팅된값-->
+	</select>
+	<!-- 정답일때 quiz 테이블 중에서 question과 answer 셋을 가지고 옴 -->
+</mapper>
