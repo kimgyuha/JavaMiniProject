@@ -41,6 +41,7 @@ public class AdminMemberController {
 //	@RequestMapping(value = "/createAccountConfirm", method = RequestMethod.POST)
 	@PostMapping("/createAccountConfirm")
 	public String createAccountConfirm(AdminMemberVo adminMemberVo) {
+		//PostMapping이기 때문에 AdminMemberVo adminMemberVo을 매개변수로 받음 
 		System.out.println("[AdminMemberController] createAccountConfirm()");
 		
 		String nextPage = "admin/member/create_account_ok";

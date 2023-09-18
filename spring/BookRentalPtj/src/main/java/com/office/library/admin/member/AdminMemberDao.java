@@ -249,8 +249,10 @@ public class AdminMemberDao {
 	public AdminMemberVo selectAdmin(int a_m_no) {
 		System.out.println("[AdminMemberDao] selectAdmin()");
 		
-		String sql =  "SELECT * FROM tbl_admin_member "
-					+ "WHERE a_m_no = ?";
+		String sql =  "SELECT * FROM tbl_admin_member WHERE a_m_no = ?"; 
+		//"SELECT * FROM tbl_admin_member "
+		//+ "WHERE a_m_no = ?";  도 같음 
+
 	
 		List<AdminMemberVo> adminMemberVos = new ArrayList<AdminMemberVo>();
 		
@@ -279,7 +281,7 @@ public class AdminMemberDao {
 					
 				}
 				
-			}, a_m_no);
+			}, a_m_no); //위의 sqㅣ WHERE a_m_no = ? <-?에 a_m_no이 들어감
 			
 		} catch (Exception e) {
 			e.printStackTrace();
